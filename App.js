@@ -431,7 +431,6 @@ Ext.define('CustomApp', {
         this.gWs = appWs.ObjectID;
         console.log("this.gWs: " + this.gWs);
 
-
         var currentUserTextBox = this.down('#currentUserTextBox');
         currentUserTextBox.update(this.gUserName);
 
@@ -481,7 +480,6 @@ Ext.define('CustomApp', {
                     // capture Project selected
                     this.gSelectedProject = selectedRecord.get('Name');
                     this.gSelectedProjectID = selectedRecord.get('ObjectID');
-                    this.gWs = selectedRecord.get('Workspace');
 
                     console.log("this.gSelectedProject: " + this.gSelectedProject);
                     console.log("this.gSelectedProject: " + this.gSelectedProjectID);
@@ -606,6 +604,7 @@ Ext.define('CustomApp', {
         aURL += "&uuid=" + this.gSelectedUserID;
         aURL += "&poid=" + this.gSelectedProject;
         aURL += "&rolt=" + aPermission;
+        aURL += "&rwid=" + this.gWs;
 
         console.log("aURL: " + aURL);
 
