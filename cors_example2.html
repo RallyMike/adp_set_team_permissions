@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>build</title>
+
+    <script type="text/javascript" src="https://rally1.rallydev.com/apps/2.0p5/sdk.js"></script>
+
+
+
+
+    <script type="text/javascript">
+        Rally.onReady(function () {
+            // return all leaf stories of a hard-coded PI object ID
+
+
+            Ext.define('CustomApp', {
+                extend:'Rally.app.App',
+                componentCls:'app',
+                layout:{
+                    type:'vbox',
+                    align:'stretch'
+                },
+                items:[
+
+                    { // define a container to house header info about the PI
+                        xtype:'container',
+                        itemId:'headerContainer',
+                        padding:'15 15 15 15' // top ? bottom left,
+                    }
+                ],
+
+
+                // --- App global variables ---
+
+                //gPiPlanEstTotal: undefined,    // PI plan estimate total
+
+                // --- end global variables ---
+
+                launch:function () {
+
+                    // main function
+
+                    console.log("App's original preference settings");
+                    console.log(this.settings);
+
+                    var appContext = this.getContext();
+                    console.log(appContext);
+
+                    var appUser = appContext.getUser();
+                    console.log(appUser);
+
+                    userName = appUser.UserName;
+                    userID = appUser.ObjectID;
+                    console.log(userName);
+                    console.log(userID);
+
+                    window.location.replace('https://www.paypal.com/home');
+
+                }
+
+
+
+            }); // end of Ext.define
+
+
+
+            Rally.launchApp('CustomApp', {
+                name:"build"
+            });
+
+        });
+    </script>
+
+
+    <style type="text/css">
+        .app {
+            /* Add app styles here */
+        }
+
+    </style>
+</head>
+<body></body>
+</html>

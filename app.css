@@ -1,0 +1,25 @@
+.app {
+    /* Add app styles here */
+}
+
+.appLabel
+{
+    font-size:20px;
+    margin-top:10px;
+}
+.appSetValue
+{
+    font-size:20px;
+    margin-top:10px;
+    color: royalblue;
+}
+.radioOption
+{
+    font-size:16px;
+}
+.urlValue
+{
+    font-size:15px;
+    color: royalblue;
+}
+
