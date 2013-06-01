@@ -602,7 +602,7 @@ Ext.define('CustomApp', {
 
         aURL += "ruid=" + this.gUserID;
         aURL += "&uuid=" + this.gSelectedUserID;
-        aURL += "&poid=" + this.gSelectedProject;
+        aURL += "&poid=" + this.gSelectedProjectID;
         aURL += "&rolt=" + aPermission;
         aURL += "&rwid=" + this.gWs;
 
