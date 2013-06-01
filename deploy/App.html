@@ -621,7 +621,11 @@ Ext.define('CustomApp', {
         console.log("aURL: " + aURL);
 
         var urlTextBox = this.down('#urlToCallValueTextBox');
-        urlTextBox.update(aURL);
+        //urlTextBox.update(aURL);
+
+        // <a href="http://www.w3schools.com/">Visit W3Schools</a>
+
+        urlTextBox.update('<a href="' + aURL + '">Click Here</a>');
 
 
         console.log("_fireGrantPermissions --- Exit");
